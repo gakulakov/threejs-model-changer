@@ -20,7 +20,10 @@ function App() {
             res('Done')
         })
 
-        changePromise.then(res => setChange(file))
+        changePromise.then(res => {
+            console.log(res)
+            setChange(file)
+        })
     }
 
   return (
@@ -28,18 +31,18 @@ function App() {
         <div className={'select-panel'}>
 
             <div className={'item'} onClick={() => changeHandler(room)}>
-                <img className={'img'} height={100} width={100} src={previewOne} alt="image"/>
+                <img className={'img'} height={100} width={100} src={previewOne} alt="prev-1"/>
 
             </div>
             <div className={'item'} onClick={() => changeHandler(perfectKitchen)}>
-                <img className={'img'} width={100} height={100} src="https://static.turbosquid.com/Preview/2020/08/25__08_04_43/A.jpgB166792E-E4A6-4601-9CD7-91FF77A145B2Zoom.jpg" alt="image"/>
+                <img className={'img'} width={100} height={100} src="https://static.turbosquid.com/Preview/2020/08/25__08_04_43/A.jpgB166792E-E4A6-4601-9CD7-91FF77A145B2Zoom.jpg" alt="prev-2"/>
 
             </div>
             <div className={'item'} onClick={() => changeHandler(secondKitchen)}>
-                <img className={'img'} width={100} height={100} src="https://img2.cgtrader.com/items/2933907/4db8e340db/aarchvis-kitchen-blender-render-3d-model-blend.jpg" alt="image"/>
+                <img className={'img'} width={100} height={100} src="https://img2.cgtrader.com/items/2933907/4db8e340db/aarchvis-kitchen-blender-render-3d-model-blend.jpg" alt="prev-3"/>
             </div>
             <div className={'item'} onClick={() => changeHandler(office)}>
-                <img className={'img'} width={100} src="https://img1.cgtrader.com/items/3020219/419a4ce19c/large/blender-cycles-conference-room-scene-3d-model-blend.jpg" alt="image"/>
+                <img className={'img'} width={100} src="https://img1.cgtrader.com/items/3020219/419a4ce19c/large/blender-cycles-conference-room-scene-3d-model-blend.jpg" alt="prev-4"/>
             </div>
         </div>
         <div className="App">
